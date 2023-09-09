@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Exibição</title>
+
+<body>
+
+    <h2>Bora Codar?</h2>
+
+    <br>
+
+
+    <script>
+
+        let soma = 0;
+        let numeros = []
+
+        for (var n = 1; n <= 10; n++) {
+            var input = prompt("Digite o " + n + "º número: ");
+            var numero = parseFloat(input);
+
+            if (!isNaN(numero)) {
+                soma += numero;
+                numeros.push(numero); 
+            } else {
+                alert("Valor inválido. Por favor, insira um número válido.");
+                i--; // Decrementa o índice para que o usuário insira o valor novamente.
+            }
+        }
+        document.write("Números informados pelo usuário: " + numeros.join(", ") + "<br>");
+        document.write("O resultado da soma desses valores é : " + soma + "<br>");
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

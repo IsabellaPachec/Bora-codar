@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Exibição</title>
+
+<body>
+
+    <h2>Bora Codar?</h2>
+
+    <br>
+
+
+    <script>
+
+        var soma = 0;
+        var valores = [];/* o [] significa que essa variavel recebera valores enquanto o programa for executado, o nome é array vazio */
+        var numerosSomados = [];
+
+        for (var n = 1; n <= 6; n++) { /* far inicia um loop, com var n = 1 uma variavel é iniciada com o valor 1, ela sera o contador do loop. n <= 6 diz que esse loop vai parar quando chegar ao 6, ou seja ele verifica se o loop deve continuar sendo executado. n++ é igual a n= n +1, isso adiciona mais um ao contador,  fazendo que o contador aumente em 1 a cada iteração do loop. */ /* significa que estamos iniciando um loop 'for' onde 'n' começa com o valor 1, o loop continuará enquanto 'n' for menor ou igual a 6 e, após cada iteração do loop, 'n' será incrementado em 1. Isso permite que o loop seja executado exatamente 6 vezes, com 'n' assumindo os valores de 1 a 6 em cada iteração.*/
+            var numero = parseFloat(prompt("Digite o " + n + "º número: "));
+
+            if (numero < 72) {
+                soma += numero;
+                numerosSomados.push(numero); /*adiciona uma variavel com valor no array vazio */
+        }
+
+        valores.push(numero);
+    }
+        document.write("Valores informados pelo usuário: " + valores.join(", ") + "<br>"); /*join concatena todos os elementos de um array e o (",") exibira eles com virgulas e espaço */
+        document.write("Números somados: " + numerosSomados.join(", ") + "<br>");
+        document.write("Soma dos valores inferiores a 72: " + soma + "<br>");
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

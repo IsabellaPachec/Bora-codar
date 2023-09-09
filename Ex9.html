@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Exibição</title>
+
+<body>
+
+    <h2>Bora Codar?</h2>
+
+    <br>
+
+
+    <script>
+
+        let ano = parseFloat(prompt("Digite o ano do seu nascimento"));
+        let atual = parseFloat(prompt("Digite o ano em que estamos"));
+
+        let calculo = atual - ano;
+
+        document.write("Sua idade é: " + calculo);
+
+        if(calculo<=15){
+            alert("você não pode votar este ano");
+        }else{
+            if(calculo<18){
+                alert("Este ano seu voto é opcional");
+            }else{
+                if(calculo<=70){
+                    alert("Você pode votar este ano. Seu voto é obrigatorio");
+                }else{
+                    Alert("Este ano seu voto é opcional");
+                }
+            }
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Exibição</title>
+
+<body>
+
+    <h2>Bora Codar?</h2>
+
+    <br>
+
+
+    <script>
+
+        var soma = 0;
+        var valores = [];
+        var numerosInformados = [];
+
+        for (var n = 1; n <= 4; n++) {
+            var numero = parseFloat(prompt("Digite o " + n + "º número: "));
+
+            if (!isNaN(numero)) {
+                if (numero >= 0 && numero <= 10) { // Verifica se o número está no intervalo [0, 10]
+                    soma += numero;
+                    numerosInformados.push(numero);
+                }
+            }
+        } 
+
+        var media = soma / numerosInformados.length; //  length é o tamanho ou comprimento do array, indicando quantos elementos ele contém.
+
+        if(media>= 5){
+            alert("Você foi aprovado no teste");
+        }else{
+            alert("Você não foi aprovado, tente novamente");
+        }
+
+        document.write("Números informados pelo usuário: " + numerosInformados.join(", ") + "<br>");
+        document.write("A média dos valores informados é: " + media + "<br>");
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
